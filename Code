@@ -1,0 +1,17 @@
+import math
+open('Angles.txt', 'r') as file:
+    inputs = file.read().split()
+theta_1 = float(inputs[0])
+theta_2 = float(inputs[1])
+disp_3 = float(inputs[2])
+
+with open('Lengths.txt', 'r') as file:
+    lengths = file.read().split()
+a1 = float(lengths[0])
+a2 = float(lengths[1])
+a3 = float(lengths[2])
+x = a1 * math.cos(theta_1) + a2 * math.cos(theta_1 + theta_2) + a3 * math.cos(theta_1 + theta_2 + disp_3)
+y = a1 * math.sin(theta_1) + a2 * math.sin(theta_1 + theta_2) + a3 * math.sin(theta_1 + theta_2 + disp_3)
+print("Position of end effector:")
+print("x =", x)
+print("y =", y)
