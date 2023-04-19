@@ -1,5 +1,5 @@
 import math
-with open('Angles.txt', 'r') as file:
+open('Angles.txt', 'r') as file:
     inputs = file.read().split()
 theta_1 = float(inputs[0])
 theta_2 = float(inputs[1])
